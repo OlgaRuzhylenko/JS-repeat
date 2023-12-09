@@ -1,11 +1,17 @@
 "use strict"
+function findLongestWord(string) {
+  // Change code below this line
+const arr = string.split(' ');
+console.log(arr);
+for (const item of arr) {
+  console.log(item.length);
 
-
-function checkForName(fullName, name) {
- const result = fullName.includes(name); // Change this line
-  return result;
+  
+  }
+  
 }
-const result = checkForName("Egor Kolbasov", "Egor");
-console.log(result);
 
+  // Change code above this line
+const result = findLongestWord("The quick brown fox jumped over the lazy dog")
+console.log(result);
 
