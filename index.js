@@ -1,17 +1,20 @@
 "use strict"
-function findLongestWord(string) {
+function includes(array, value) {
   // Change code below this line
-const arr = string.split(' ');
-console.log(arr);
-for (const item of arr) {
-  console.log(item.length);
-
-  
+  let number = 0;
+for (const item of array) {
+  if (item===value) {
+   number = item
   }
-  
+}
+return number === value
 }
 
   // Change code above this line
-const result = findLongestWord("The quick brown fox jumped over the lazy dog")
+
+
+
+  // Change code above this line
+const result = includes([1, 2, 3, 4, 5], 3)
 console.log(result);
 
