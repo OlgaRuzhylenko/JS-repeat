@@ -1,34 +1,21 @@
 "use strict"
 
 
-const atTheOldToad = {
-  potions: ["Speed potion", "Dragon breath", "Stone skin"],
-  addPotion(potionName) {
-    // Change code below this line
- this.potions.push(potionName);
- return this.potions
-    // Change code above this line
-  },
-  removePotion(potionName) {
-let index = this.potions.indexOf(potionName);
-
-if (index!== -1) {
-  this.potions.splice(index, 1)
+function makePizza(pizzaName, callback) {
+  console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
+  callback(pizzaName);
 }
-return this.potions;
-  },
-  updatePotionName(oldName, newName) {
-    let index = this.potions.indexOf(oldName);
 
-if (index!== -1) {
-  this.potions.splice(index, 1, newName)
-}
-return this.potions;
-  }
-  
-};
+makePizza("Royal Grand", function deliverPizza(pizzaName) {
+  console.log(`Delivering pizza ${pizzaName}.`);
+});
+// Change code below this line
 
-const result = atTheOldToad.updatePotionName("Dragon breath", "Polymorth")
+makePizza("Ultracheese");
+
+
+
+const result = makeMessage("Royal Grand", makePizza)
 console.log(result);
 
 
