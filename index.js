@@ -1,21 +1,22 @@
 "use strict"
 
 
-function makePizza(pizzaName, callback) {
-  console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
-  callback(pizzaName);
+function changeEven(numbers, value) {
+  // Change code below this line
+  let newArr = []
+  numbers.forEach((item)=> {
+    if (item % 2 === 0) {
+      item = item + value
+    }
+    newArr.push(item)
+  })
+  return newArr;
+  // Change code above this line
 }
 
-makePizza("Royal Grand", function deliverPizza(pizzaName) {
-  console.log(`Delivering pizza ${pizzaName}.`);
-});
-// Change code below this line
-
-makePizza("Ultracheese");
 
 
-
-const result = makeMessage("Royal Grand", makePizza)
+const result = changeEven([1, 2, 3, 4, 5], 10)
 console.log(result);
 
 
