@@ -1,36 +1,65 @@
 "use strict"
+// Знаходження простих чисел:
+// Напишіть функцію, яка приймає число і повертає true, якщо воно є простим, і false в іншому випадку.
+
+// Обернення слів у рядку:
+// Напишіть функцію, яка обертає кожне слово в рядку, залишаючи порядок слів незмінним.
+
+// Обчислення суми чисел Фібоначчі:
+// Напишіть функцію, яка приймає число n і повертає суму перших n чисел Фібоначчі.
+
+// Визначення найбільшого спільного дільника (НСД):
+// Напишіть функцію, яка приймає два числа і повертає їхній найбільший спільний дільник (НСД).
+
+// Сортування рядка за кількістю входжень кожного символу:
+// Напишіть функцію, яка приймає рядок і повертає новий рядок, в якому символи впорядковані за зростанням їхньої кількості входжень у вихідному рядку.
 
 
-
-function sortByProperty(arr){
-return arr.filter((item) => item.interests.length)
-
-// .sort((a, b) => b - a)
-// .map((item) => item.name)
+function foo(number){
+let summ = 0;
+for (let i = 0; i < number; i++) {
+  summ = i + 
+}
 }
 
-
-const result = sortByProperty([
-  {
-    name:'Olga',
-    age: '31',
-    student: true,
-    interests: ['JS', 'reading', 'family', 'friends']
-  },
-  {
-    name:'Alex',
-    age: '36',
-    student: false,
-    interests: ['moto', 'fising', 'family']
-  },
-  {
-    name:'Ivan',
-    age: '6',
-    student: false,
-    interests: ['cartoons', 'toys']
-  },
-])
+const result = foo(5)
 console.log(result);
+
+
+
+
+
+
+
+
+
+
+// const result = sortByProperty([
+//   {
+//     name:'Olga',
+//     age: 31,
+//     student: true,
+//     interests: ['JS', 'reading', 'family', 'friends']
+//   },
+//   {
+//     name:'Alex',
+//     age: 36,
+//     student: false,
+//     interests: ['moto', 'fising', 'family']
+//   },
+//   {
+//     name:'Ivan',
+//     age: 6,
+//     student: false,
+//     interests: ['cartoons', 'toys']
+//   },
+//   {
+//     name:'vovva',
+//     student: false,
+//     interests: ['cartoons']
+//   },
+// ])
+// console.log(result);
 
 
 
