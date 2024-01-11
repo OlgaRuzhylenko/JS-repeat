@@ -1,17 +1,34 @@
 "use strict"
-
-function squareDigits(num){
-    const digits = [];
-    while (num > 0) {
-        const digit = num % 10;
-        digits.unshift(digit); // Додаємо цифру в початок масиву
-        num = Math.floor(num / 10);
-      }
-    return digits
+const quarterOf = (month) => {
+  let quarter;
+  switch (month) {
+    case 1:
+      case 2:
+      case 3:
+        quarter = 1;
+        break;
+  
+      case 4:
+      case 5:
+      case 6:
+        quarter = 2;
+        break;
+  
+      case 7:
+      case 8:
+      case 9:
+        quarter = 3;
+        break;
+  
+      case 10:
+      case 11:
+      case 12:
+        quarter = 4;
+        break;
+  
   }
-const result = squareDigits(919)
+  return quarter
+}
+
+const result = quarterOf(3);
 console.log(result);
-
-
-
-
