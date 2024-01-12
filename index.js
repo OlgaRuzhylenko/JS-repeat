@@ -1,8 +1,7 @@
 "use strict"
-function century(year) {
-  const newCentury = Math.ceil((year / 100))
-  return newCentury
+function removeExclamationMarks(s) {
+return s.split('!').join('');
 }
 
-const result = century(1700)
+const result = removeExclamationMarks("He!llo! World!")
 console.log(result);
