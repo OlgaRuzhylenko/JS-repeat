@@ -1,21 +1,8 @@
-"use strict"
-function XO(str) {
-   const arr = str.toLowerCase().split('');
-   let Xarr = [];
-   let OArr = [];
-for (let i = 0; i < arr.length; i+=1) {
-    if (arr[i] === 'x') {
-        Xarr.push(arr[i]);
-    } else {
-        OArr.push(arr[i]);
-    }
-}
-if (Xarr.length === OArr.length) {
-    return true
-} else {
-    return false
-}
+"use strict";
+var uniqueInOrder=function(iterable){
+    console.log([...iterable]);
+    return [...iterable].filter((a, i) => a !== iterable[i-1])
 }
 
-const result = XO("zzoo");
+const result = uniqueInOrder("AAAABBBCCDAABBB");
 console.log(result);
