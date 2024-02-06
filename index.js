@@ -14,6 +14,9 @@
     { id: 4, task: "Погуляти на свіжому повітрі", completed: true },
   ];
 const list = document.querySelector('.js-list'); 
+ const common = {
+  KEY_TASKS: 'taskStyle',
+};
 
 function taskMarcup(arr) {
     const markup = arr.map(({id, task, completed }) => 
@@ -36,10 +39,17 @@ function onListClick(evt) {
   if (evt.target.classList.contains('js-done')) {
     const { id } = evt.target.closest('.js-item').dataset;
     const taskElement = evt.target.closest('.js-item').querySelector('.js-task');
-    console.log(taskElement);
     const task = findTask(Number(id));
     
-  taskElement.classList.add('completed');
+    const taskStyle = taskElement.classList.toggle('completed');
+    localStorage.setItem(common.KEY_TASKS, JSON.stringify(taskStyle))
+  }
+
+  if (evt.target.classList.contains('js-close')) {
+    const { id } = evt.target.closest('.js-item').dataset;
+    const taskItem = document.querySelector('.js-item');
+
+    taskItem.remove();
   }
 }
 
