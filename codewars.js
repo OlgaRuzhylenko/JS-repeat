@@ -1,14 +1,8 @@
-function getMiddle(s)
-{
-    const arr = s.split('');
-    const arrLength = arr.length;
-    if (arrLength % 2) {
-        return arr[(arrLength - 1) / 2]
-    } else {
-        
-    }
-
+function descendingOrder(n){
+   return +([n].join('').split('').sort((a,b)=> (b - a)).join(''))
+    
 }
 
-const result = getMiddle("testing");
+
+const result = descendingOrder(1);
 console.log(result);
