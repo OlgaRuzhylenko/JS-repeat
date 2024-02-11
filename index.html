@@ -7,10 +7,31 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <div class="js-form-container fb fb-v" style="width: 100vw">
+      <form class="form box js-form fb">
+        <input
+          class="js-input form-control"
+          name="task"
+          placeholder="Task"
+        />
+        <input
+        class="js-input form-control"
+        name="id"
+        placeholder="id"
+      />
+          <select name="status" >
+            <option value="true">Completed</option>
+            <option value="false">Not Completed</option>
+          </select>
+        <button class="form-control" type="submit">Add Task</button>
+      </form>
+
+      <div class="box" style="width: 80vw">
     <ul class="js-list"></ul>
 
+
     <script src="./index.js" type="module"></script>
-    <script src="./codewars.js" type="module"></script>
+    <!-- <script src="./codewars.js" type="module"></script> -->
     <!-- <script src="./8module.js" type="module"></script> -->
   </body>
 </html>
