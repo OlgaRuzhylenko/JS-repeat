@@ -11,8 +11,8 @@ const keyTasksStyle = 'task status'
 
 function taskMarcup(arr) {
     const markup = arr.map(({id, task, completed }) => 
-        ` <li class="js-item" data-id="${id}">
-      <p class="js-task">${task}</p>
+        ` <li class="js-item " data-id="${id}">
+      <p class="js-task ${completed ? 'completed' : ''}">${task}</p>
       <li class="js-btn">
         <button class="js-done">Done</button>
         <button class="js-close">Close</button>
@@ -30,11 +30,11 @@ function onListClick(evt) {
     const { id } = evt.target.closest('.js-item').dataset;
     const taskElement = evt.target.closest('.js-item').querySelector('.js-task');
     const task = findTask(Number(id));
-    
+    task.completed = !task.completed;
     const completed = taskElement.classList.toggle('completed');
     
     
-    localStorage.setItem(keyTasksStyle, JSON.stringify(completed))
+    localStorage.setItem(keyTasksStyle, JSON.stringify(tasks))
   }
 
   if (evt.target.classList.contains('js-close')) {
