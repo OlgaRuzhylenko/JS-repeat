@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="js-form-container fb fb-v" style="width: 100vw">
+    <!-- <div class="js-form-container fb fb-v" style="width: 100vw">
       <form class="form box js-form fb">
         <input
           class="js-input form-control"
@@ -18,20 +18,36 @@
         class="js-input form-control"
         name="id"
         placeholder="id"
-      />
-          <!-- <select name="status" id="status">
+      /> -->
+    <!-- <select name="status" id="status">
             <option value="true">Completed</option>
             <option value="false">Not Completed</option>
           </select> -->
-        <button class="form-control" type="submit">Add Task</button>
+    <!-- <button class="form-control" type="submit">Add Task</button>
       </form>
 
       <div class="box" style="width: 80vw">
-    <ul class="js-list"></ul>
+    <ul class="js-list"></ul> -->
+
+    <!-- ===================api -->
+    <form action="submit" class="js-form">
+      <input type="text" name="query" />
+      <select name="days">
+        <option value="3">3</option>
+        <option value="5">5</option>
+        <option value="7">7</option>
+        <option value="10">10</option>
+      </select>
+      <button>Find</button>
+    </form>
+
+<ul class="js-list"></ul>
 
 
-    <script src="./index.js" type="module"></script>
+
+    <!-- <script src="./index.js" type="module"></script> -->
     <!-- <script src="./codewars.js" type="module"></script> -->
     <!-- <script src="./8module.js" type="module"></script> -->
+    <script src="./api.js" type="module"></script>
   </body>
 </html>
